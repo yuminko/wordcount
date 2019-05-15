@@ -1,0 +1,36 @@
+<style>
+    h1{ 
+        color:rgb(63, 68, 68);
+        font-family:'Courier New', Courier, monospace;
+        font-weight: 700;
+        text-align: center;
+        }
+    h3{ 
+        color:burlywood;
+        text-align: center;
+        width: 30%
+        }
+    #back {
+        background-color: rgb(146, 192, 153);
+        width: 30%;
+        border-style: dotted;
+        border-width: 5px;
+        border-color:lightsalmon;
+        border-radius: 4px;
+         }
+    a{
+        font-family: 'Times New Roman', Times, serif;
+        font-size : 20px;
+    }
+</style>
+<h1 id="back">  W O R D C O U N T </h1>
+<h3> 이곳에다 글자를 치세요 ! </h3>
+
+<a href="{% url 'about' %}">about</a>
+<br>
+</br>
+<form action="{% url 'count' %}" method="GET">
+    <textarea cols="70" rows="20" name="fulltext"></textarea>
+    <br>
+    <input type="submit" value="Count!"/>
+</form>
